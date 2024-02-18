@@ -13,6 +13,14 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily: {
+        sans: ["Graphik", "sans-serif"],
+        serif: ["Merriweather", "serif"],
+        burtons: "burtons",
+        poopins: ["Poppins", "sans-serif"],
+        roboto: ["Roboto", "Merriweather"],
+        merriweather: ["Merriweather"],
+      },
     },
   },
   plugins: [],

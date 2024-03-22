@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import ProfilePic from "@/public/foto data diri2.png";
 import Image from "next/image";
@@ -11,18 +12,38 @@ import {
 import { SiGmail as Mail } from "react-icons/si";
 
 const Profile = () => {
+  const useWindowSize = () => {
+    const [windowSize, setWindowSize] = useState({
+      width: undefined,
+      height: undefined,
+    });
+
+    useEffect(() => {
+      window.addEventListener("resize", () => {
+        setWindowSize({ width: window.innerWidth, height: window.innerHeight });
+        console.log(windowSize.width, windowSize.height);
+      });
+    }, []);
+    return windowSize;
+  };
+
+  const size = useWindowSize();
+
   return (
-    <section className="flex flex-col items-center justify-center min-h-full ">
+    <section
+      className="flex flex-col items-center justify-center min-h-full z-10 overflow-hidden"
+      id="anchor_profile"
+    >
       <p
-        className={`text-[3.13rem] md:text-[3.75rem] text-center text-white font-burtons`}
+        className={`text-[3.13rem] md:text-[3.75rem] text-center text-white font-burtons animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white`}
       >
         Yoga pangestu
       </p>
-      <p className=" text-gray-800 text-center text-[1.56rem] md:text-[1.88rem] p-2 pb-4 font-merriweather">
+      <p className=" text-center text-[1.56rem] text-[#CCCCCC] md:text-[1.88rem] p-2 pb-4  font-merriweather">
         Junior Front-end Developer
       </p>
 
-      <div className="relative  border-[#5bc0c2] border-2 bg-[#3E8586] rounded-full overflow-hidden w-80 h-80 max-md:w-40 max-md:h-40">
+      <div className="relative   bg-[#3E8586] rounded-full overflow-hidden w-80 h-80 max-md:w-40 max-md:h-40">
         <Image
           src={ProfilePic}
           alt="Profile Picture"

@@ -1,8 +1,8 @@
 ## Color Pallets
 Triangle :
-Blue : #00AAFF
+Blue : #1992c1
 Yellow : #FFFF00
-Purple : #9500FF
+Green : #34A058
 
 ## TODO
 1. Edit dan cocoken color Title/nama 

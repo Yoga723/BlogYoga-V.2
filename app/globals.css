@@ -8,6 +8,48 @@
   }
 }
 
+@font-face {
+  font-family: "burtons";
+  src: url("../public/Burtons.otf");
+}
+
 .contact-Box {
-  @apply flex justify-center items-center text-4xl border-sky-500 border-2 max-sm:w-[3.50rem] max-sm:h-[3.50rem] max-md:w-[15vw] max-md:h-[10vh];
+  @apply flex justify-center items-center text-4xl text-[#CCCCCC] text-opacity-80 max-sm:w-[3.50rem] max-sm:h-[3.50rem] max-md:w-[15vw] max-md:h-[10vh] hover:text-white;
+}
+
+.about-true {
+  @apply w-2 h-2 border-rose-500 border-2  rounded-full  bg-white my-[3.5px];
+}
+
+.about-false {
+  @apply w-2 h-2 border-rose-500 border-2 rounded-full my-[3.5px];
+}
+
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  border-radius: 5px;
+}
+
+@keyframes twinkle {
+  0% {
+    transform: scale(1, 1);
+    background: rgba(255, 255, 255, 0);
+    animation-timing-function: linear;
+  }
+  40% {
+    transform: scale(0.8, 0.8);
+    background: rgba(255, 255, 255, 1);
+    animation-timing-function: ease-out;
+  }
+  80% {
+    background: rgba(255, 255, 255, 0);
+    transform: scale(1, 1);
+  }
+  100% {
+    background: rgba(255, 255, 255, 0);
+    transform: scale(1, 1);
+  }
 }

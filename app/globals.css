@@ -13,26 +13,46 @@
   src: url("../public/Burtons.otf");
 }
 
-.contact-Box {
-  @apply flex justify-center items-center text-4xl text-[#CCCCCC] text-opacity-80 max-sm:w-[3.50rem] max-sm:h-[3.50rem] max-md:w-[15vw] max-md:h-[10vh] hover:text-white;
+
+.contact-wrapper {
+  @apply rounded-full text-center flex justify-center items-center bg-gray-600 bg-opacity-40 lg:w-[12vh] lg:h-[12vh] w-[7vh] h-[7vh] hover:text-gray-100 border-2 border-white;
+}
+.contact-box {
+  @apply flex justify-center items-center text-4xl text-[#00FFFF] max-md:w-[15vw] max-md:h-[10vh] hover:text-[#7bafc6];
+}
+
+.skills-container {
+  @apply w-full h-full justify-between  flex flex-col gap-8;
+}
+
+.skills-wrapper {
+  @apply text-white p-2 items-center justify-center flex flex-col;
+}
+
+.skills-box {
+  @apply max-sm:w-[5.5rem] max-sm:h-[5.5rem] max-md:w-[15vw] max-md:h-[10vh]  text-[#00FFFF] border-2 border-white rounded-full p-4 bg-gray-600 bg-opacity-40;
+}
+
+.skills-text {
+  @apply mt-[0.85rem];
 }
 
 .about-true {
-  @apply w-2 h-2 border-rose-500 border-2  rounded-full  bg-white my-[3.5px];
+  @apply w-2 h-2 border-[#7FCDEE] border-2  rounded-full  bg-white my-[3.5px];
 }
 
 .about-false {
-  @apply w-2 h-2 border-rose-500 border-2 rounded-full my-[3.5px];
+  @apply w-2 h-2 border-white border-2 rounded-full my-[3.5px];
 }
-
 
 .star {
   position: absolute;
-  width: 2px;
-  height: 2px;
+  width: 3px;
+  height: 3px;
   border-radius: 5px;
 }
 
+/* Animasi Untuk Bintang BG */
 @keyframes twinkle {
   0% {
     transform: scale(1, 1);
@@ -51,5 +71,35 @@
   100% {
     background: rgba(255, 255, 255, 0);
     transform: scale(1, 1);
+  }
+}
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+
+/* Animasi outline text */
+.font-outline-2 {
+  -webkit-text-stroke: 1px var(--outline-color);
+  animation: textGradientTitle 3s linear infinite;
+}
+.font-outline-4 {
+  -webkit-text-stroke: 4px #0ea5e9;
+  animation: textGradientTitle 3s linear infinite;
+}
+
+@keyframes textGradientTitle {
+  /* for blue sky color :#0ea5e9 */
+  0% {
+    --outline-color: #ffffff; 
+  }
+  100% {
+    --outline-color: #ffffff; 
   }
 }

@@ -39,9 +39,11 @@ const config: Config = {
             borderColor: "white",
           },
         },
+        
       },
       animation: {
         typing: "typing 2s steps(10) alternate, blink 1s infinite",
+        starAnimation: "pulse 5s cubic-bezier(0.4, 0, 0.6, 1) infinite",
       },
     },
   },

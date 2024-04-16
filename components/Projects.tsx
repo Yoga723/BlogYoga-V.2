@@ -1,15 +1,31 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
-import { ProjectCard } from ".";
+import React, { useState } from "react";
+import ProjectCard from "./Component-child/ProjectCard";
+import { projectList } from "@/utils/index";
 
 const Projects = () => {
+  const [active, setActive] = useState(1);
+  console.log(active);
   return (
-    <section className="flex flex-col max-md:gap-6 w-screen p-4 justify-center items-center ">
+    <section className="flex flex-col gap-5 w-screen justify-center items-center px-7">
       <h2 className="text-[2rem] tracking-widest font-burtons font-extrabold text-[#ffffff]">
         Other Projects
       </h2>
-      <ProjectCard />
+      <div className="flex flex-col lg:flex-row w-full min-h-[70vh] max-lg:gap-5 gap-7 overflow-hidden">
+        {projectList.map((project, index) => {
+          return (
+            <ProjectCard
+              key={project.id}
+              {...project}
+              index={index}
+              active={active}
+              setActive={setActive}
+            />
+          );
+        })}
+      </div>
     </section>
   );
 };

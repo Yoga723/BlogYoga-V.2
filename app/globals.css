@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  scroll-behaviour: smooth;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -12,7 +16,6 @@
   font-family: "burtons";
   src: url("../public/Burtons.otf");
 }
-
 
 .contact-wrapper {
   @apply rounded-full text-center flex justify-center items-center bg-gray-600 bg-opacity-40 lg:w-[12vh] lg:h-[12vh] w-[7vh] h-[7vh] hover:text-gray-100 border-2 border-white;
@@ -43,6 +46,10 @@
 
 .about-false {
   @apply w-2 h-2 border-white border-2 rounded-full my-[3.5px];
+}
+
+.about-content {
+  @apply text-[#dedede] text-lg leading-relaxed font-roboto tracking-wide   w-10/12 h-fit;
 }
 
 .star {
@@ -83,7 +90,6 @@
   }
 }
 
-
 /* Animasi outline text */
 .font-outline-2 {
   -webkit-text-stroke: 1px var(--outline-color);
@@ -97,9 +103,31 @@
 @keyframes textGradientTitle {
   /* for blue sky color :#0ea5e9 */
   0% {
-    --outline-color: #ffffff; 
+    --outline-color: #ffffff;
   }
   100% {
-    --outline-color: #ffffff; 
+    --outline-color: #ffffff;
+  }
+}
+
+/* Animasi vertical line about */
+.vertical-animation-true {
+  background: linear-gradient(240deg, #5bb2d7 20%, #f7931e 100%);
+  animation: verticalAnimation 4s linear;
+}
+.vertical-animation-false {
+  background: linear-gradient(240deg, #f7931e 20%, #5bb2d7 100%);
+  animation: verticalAnimation 3s linear;
+}
+
+@keyframes verticalAnimation {
+  /* for blue sky color :#0ea5e9 */
+  0% {
+    background: linear-gradient(240deg, #5bb2d7 20%, #f7931e 100%);
+    animation-timing-function: linear;
+  }
+  100% {
+    background: linear-gradient(-240deg, #f7931e 20%, #5bb2d7 100%);
+    animation-timing-function: linear;
   }
 }

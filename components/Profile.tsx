@@ -1,13 +1,9 @@
+"use client";
 import ProfilePic from "@/public/foto data diri2.png";
 import Image from "next/image";
 import Link from "next/link";
-import {
-  FaWhatsapp as WhatsApp,
-  FaLinkedin as LinkedIn,
-  FaGithub as Github,
-} from "react-icons/fa";
-import { SiGmail as Mail } from "react-icons/si";
 import { contactList } from "@/utils";
+import { motion } from "framer-motion";
 
 const Profile = () => {
   return (
@@ -36,18 +32,25 @@ const Profile = () => {
         <div className="flex flex-row w-full justify-between mt-[2.18rem] gap-8">
           {contactList.map((Contact) => {
             return (
-              <div
-                className="contact-wrapper"
-                key={Contact.id}
+              <Link
+                href={Contact.contactLink}
+                className="contact-box"
+                target="_blank"
               >
-                <Link
-                  href={Contact.contactLink}
-                  className="contact-box"
-                  target="_blank"
+                <motion.div
+                  className="contact-wrapper"
+                  key={Contact.id}
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 1.5 }}
                 >
-                  <Contact.icon />
-                </Link>
-              </div>
+                  <motion.p
+                    whileHover={{ scale: 1.3 }}
+                    whileTap={{ scale: 0.8 }}
+                  >
+                    <Contact.icon />
+                  </motion.p>
+                </motion.div>
+              </Link>
             );
           })}
         </div>

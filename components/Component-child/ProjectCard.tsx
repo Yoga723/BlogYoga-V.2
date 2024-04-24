@@ -35,10 +35,10 @@ const ProjectCard = ({
       onClick={() => {
         setActive(id);
       }}
-      className={`relative flex text-gray-300 items-center justify-center lg:h-[700px] min-w-[170px] p-2 border-sky-500 border-2 rounded-lg transition-all duration-[0.7s] ease-out-flex cursor-pointer  ${
+      className={`relative flex text-gray-300 items-center justify-center lg:h-[700px] min-w-[170px] p-2 rounded-lg transition-all duration-[0.7s] ease-out-flex cursor-pointer border border-sky-300  ${
         id === active
-          ? "bg-green-500 lg:flex-[3.5] flex-[10]"
-          : "lg:flex-[0.5] flex-2"
+          ? "bg-gradient-to-br from-sky-800 via-sky-600 to-[#00FFFF] lg:flex-[3.5] flex-[10]"
+          : "lg:flex-[0.5] flex-2 "
       } `}
     >
       {id === active ? "" : <div className=" absolute z-10 w-full h-full" />}

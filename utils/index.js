@@ -36,7 +36,7 @@ export const contactList = [
   {
     id: 1,
     contactTitle: "WhatsApp",
-    contactLink: "https://firstreactlandingpage.000webhostapp.com/",
+    contactLink: "https://wa.me/082225035259",
     icon: WhatsApp,
   },
   {
@@ -54,7 +54,7 @@ export const contactList = [
   {
     id: 4,
     contactTitle: "Mail",
-    contactLink: "yogapangestu16@gmail.com",
+    contactLink: "mailto:yogapangestu16@gmail.com",
     icon: Mail,
   },
 ];

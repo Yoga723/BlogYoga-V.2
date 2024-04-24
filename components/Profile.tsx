@@ -17,25 +17,26 @@ const Profile = () => {
         Yoga <span className="text-transparent font-outline-2">pangestu</span>
       </h1>
       <h3 className=" text-center text-[1.56rem] text-[#CCCCCC] md:text-[1.88rem] p-2 pb-4  font-merriweather">
-        Junior Front-end
+        Junior Front-end<br/> yogapangestu16@gmail.com
       </h3>
 
       <div className="relative bg-[#3E8586] rounded-full overflow-hidden w-80 h-80 max-md:w-40 max-md:h-40">
         <Image
           src={ProfilePic}
           alt="Profile Picture"
-          objectFit="cover"
+          priority
         />
       </div>
 
       <div className="flex justify-center items-center flex-col w-full ">
         <div className="flex flex-row w-full justify-between mt-[2.18rem] gap-8">
-          {contactList.map((Contact) => {
+          {contactList.map((Contact, index) => {
             return (
               <Link
                 href={Contact.contactLink}
                 className="contact-box"
                 target="_blank"
+                key={index}
               >
                 <motion.div
                   className="contact-wrapper"

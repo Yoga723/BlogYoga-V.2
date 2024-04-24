@@ -25,19 +25,19 @@
 }
 
 .skills-container {
-  @apply w-full h-full justify-between  flex flex-col gap-8;
+  @apply w-full h-full justify-between  flex flex-col gap-8 ;
 }
 
 .skills-wrapper {
-  @apply text-white p-2 items-center justify-center flex flex-col;
+  @apply text-white p-2 items-center justify-center flex flex-col ;
 }
 
 .skills-box {
-  @apply max-sm:w-[5.5rem] max-sm:h-[5.5rem] max-md:w-[15vw] max-md:h-[10vh]  text-[#00FFFF] border-2 border-white rounded-full p-4 bg-gray-600 bg-opacity-40;
+  @apply max-sm:w-[5.5rem] max-sm:h-[5.5rem] max-md:w-[15vw] max-md:h-[10vh] w-[15vh] h-[15vh]  text-[#00FFFF] border-2 border-white rounded-full p-4 bg-gray-600 bg-opacity-40;
 }
 
 .skills-text {
-  @apply mt-[0.85rem];
+  @apply mt-[0.85rem] ;
 }
 
 .about-true {

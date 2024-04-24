@@ -16,7 +16,7 @@ export default function Home() {
         <div className=" absolute w-48 h-52 opacity-40 rounded-[50%] rotate-[190deg] blur-3xl top-10 bg-[#ef8105]" />
       </div>
 
-      {/* <TwinkleStars/> */}
+      <TwinkleStars/>
       <Profile />
       <About />
       <Skills />

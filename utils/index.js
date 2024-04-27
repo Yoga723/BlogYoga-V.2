@@ -4,31 +4,35 @@ import {
   FaGithub as Github,
 } from "react-icons/fa";
 import { SiGmail as Mail } from "react-icons/si";
+import hoobank from "@/public/hoobankLanding.png";
+import calculator from "@/public/calculator.png";
+import cardDetails from "@/public/cardDetails.png";
+import thread from "@/public/thread.png";
 
 export const projectList = [
   {
     id: 0,
-    projectTitle: "Website landing page, Hoobank",
-    projectLink: "https://firstreactlandingpage.000webhostapp.com/",
-    img: "",
+    projectTitle: "Interactive card details",
+    projectLink: "https://interactive-card-details-psi.vercel.app/",
+    img: cardDetails,
   },
   {
     id: 1,
-    projectTitle: "Interactive card details",
-    projectLink: "https://interactive-card-details-psi.vercel.app/",
-    img: "",
+    projectTitle: "Age Calculator",
+    projectLink: "https://age-calculator-w-next-js.vercel.app/",
+    img: calculator,
   },
   {
     id: 2,
-    projectTitle: "Thread Clones",
-    projectLink: "https://thread-clone-self.vercel.app/search",
-    img: "",
+    projectTitle: "Website landing page, Hoobank",
+    projectLink: "https://firstreactlandingpage.000webhostapp.com/",
+    img: hoobank,
   },
   {
     id: 3,
-    projectTitle: "Age Calculator",
-    projectLink: "https://age-calculator-w-next-js.vercel.app/",
-    img: "",
+    projectTitle: "Thread Clones",
+    projectLink: "https://thread-clone-self.vercel.app/search",
+    img: thread,
   },
 ];
 
@@ -59,12 +63,11 @@ export const contactList = [
   },
 ];
 
-
 // Motion Variables
 export const fadeIn = (direction, type, delay, duration) => ({
   hidden: {
-    x: direction === 'left' ? 100 : direction === 'right' ? -100 : 0,
-    y: direction === 'up' ? 100 : direction === 'down' ? -100 : 0,
+    x: direction === "left" ? 100 : direction === "right" ? -100 : 0,
+    y: direction === "up" ? 100 : direction === "down" ? -100 : 0,
     opacity: 0,
   },
   show: {
@@ -75,7 +78,7 @@ export const fadeIn = (direction, type, delay, duration) => ({
       type,
       delay,
       duration,
-      ease: 'easeOut',
+      ease: "easeOut",
     },
   },
 });

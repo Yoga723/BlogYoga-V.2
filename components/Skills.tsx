@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useEffect, useState, useRef } from "react";
-import { SiTypescript, SiJavascript, SiNextdotjs } from "react-icons/si";
+import { SiTypescript, SiJavascript, SiNextdotjs,SiTailwindcss  } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 
 // Masih bingung
@@ -59,6 +59,10 @@ const Skills = () => {
           <div className="skills-wrapper">
             <SiNextdotjs className="skills-box" />
             <p className="skills-text">Next JS</p>
+          </div>
+          <div className="skills-wrapper">
+            <SiTailwindcss className="skills-box" />
+            <p className="skills-text">Tailwind CSS</p>
           </div>
         </div>
       </div>

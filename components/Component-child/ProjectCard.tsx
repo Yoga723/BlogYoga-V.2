@@ -12,6 +12,10 @@ interface projectCardProp {
   projectLink: string;
   index: number;
   img: any;
+  logo_1: any;
+  logo_2: any;
+  logo_3: any;
+  logo_4: any;
   active: number;
   setActive: any;
 }
@@ -22,6 +26,10 @@ const ProjectCard = ({
   projectLink,
   index,
   img,
+  logo_1,
+  logo_2,
+  logo_3,
+  logo_4,
   active,
   setActive,
 }: projectCardProp) => {
@@ -45,7 +53,7 @@ const ProjectCard = ({
       {id === active ? "" : <div className=" absolute z-10 w-full h-full" />}
 
       <Link
-        href={""}
+        href={projectLink}
         target="_blank"
         rel="noopener noreferrer"
         key={id}
@@ -60,16 +68,38 @@ const ProjectCard = ({
             style={{ objectPosition: "top left" }}
           />
         </div>
-        <div className="absolute bottom-0 left-0 bg-[rgba(0,0,0,0.5)] w-full h-[15vh] lg:h-auto p-2 text-[16px]">
-          <h2 className={`font-semibold text-white `}>{projectTitle}</h2>
-          <p
-            className={`text-clip w-auto h-auto m-auto lg:${
-              id === active ? "" : "hidden"
-            }`}
-          >
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque,
-            dignissimos! Praesentium est dolore numquam itaque ad facere quia
-          </p>
+        <div className="absolute bottom-0 left-0 bg-[rgba(0,0,0,0.5)] w-full h-fit lg:h-auto p-2 text-[16px]">
+          <h2 className={`font-semibold text-white h-10 truncate`}>
+            {projectTitle}
+          </h2>
+          <div className="flex gap-2">
+            <Image
+              src={logo_1}
+              alt="Logo 1"
+              width={25}
+              height={25}
+            />
+            <Image
+              src={logo_2}
+              alt="Logo 2"
+              width={25}
+              height={25}
+            />
+            <Image
+              src={logo_3}
+              alt="Logo 3"
+              width={25}
+              height={25}
+            />
+            {logo_4 && (
+              <Image
+                src={logo_4}
+                alt="Logo 4"
+                width={25}
+                height={25}
+              />
+            )}
+          </div>
         </div>
       </Link>
     </motion.div>

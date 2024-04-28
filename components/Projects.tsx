@@ -6,7 +6,7 @@ import ProjectCard from "./Component-child/ProjectCard";
 import { projectList } from "@/utils/index";
 
 const Projects = () => {
-  const [active, setActive] = useState(1);
+  const [active, setActive] = useState(-1);
   return (
     <section className="flex flex-col gap-5 w-screen justify-center items-center px-4">
       <h2 className="text-[2rem] tracking-widest font-burtons font-extrabold text-[#ffffff]">

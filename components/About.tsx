@@ -68,8 +68,13 @@ const About = () => {
         <motion.p
           className="about-content"
           onClick={changeAbout}
+          variants={slideIn}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
         >
-          Saya juga tertarik dengan Backend terutama operasi CRUD
+          Saya juga tertarik dengan Backend, berpengalaman dengan NodeJS dan
+          MongoDB
         </motion.p>
       )}
     </section>

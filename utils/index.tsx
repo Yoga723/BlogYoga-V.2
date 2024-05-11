@@ -85,7 +85,12 @@ export const contactList = [
 ];
 
 // Motion Variables
-export const fadeIn = (direction, type, delay, duration) => ({
+export const fadeIn = (
+  direction: string,
+  type: string,
+  delay: number,
+  duration: number
+) => ({
   hidden: {
     x: direction === "left" ? 100 : direction === "right" ? -100 : 0,
     y: direction === "up" ? 100 : direction === "down" ? -100 : 0,

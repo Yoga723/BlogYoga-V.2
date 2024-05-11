@@ -4,15 +4,26 @@ import {
   FaGithub as Github,
 } from "react-icons/fa";
 import { SiGmail as Mail } from "react-icons/si";
-import hoobank from "@/public/hoobankLanding.png";
-import calculator from "@/public/calculator.png";
-import cardDetails from "@/public/cardDetails.png";
-import thread from "@/public/thread.png";
-import NextJs from "@/public/nextjs.svg";
-import ReactJs from "@/public/react.svg";
-import Tailwind from "@/public/tailwind.svg";
-import Vite from "@/public/vite.svg";
-import Typescript from "@/public/typescript.svg";
+import hoobank from "@/public/images/hoobankLanding.png";
+import calculator from "@/public/images/calculator.png";
+import cardDetails from "@/public/images/cardDetails.png";
+import thread from "@/public/images/thread.png";
+import NextJs from "@/public/icons-svg/nextjs.svg";
+import ReactJs from "@/public/icons-svg/react.svg";
+import Tailwind from "@/public/icons-svg/tailwind.svg";
+import Vite from "@/public/icons-svg/vite.svg";
+import Typescript from "@/public/icons-svg/typescript.svg";
+
+export interface projectCardProp {
+  id: number;
+  projectTitle: string;
+  projectLink: string;
+  index: number;
+  img: any;
+  logos: string[];
+  active: number;
+  setActive: any;
+}
 
 export const projectList = [
   {
@@ -20,40 +31,29 @@ export const projectList = [
     projectTitle: "Interactive card details",
     projectLink: "https://interactive-card-details-psi.vercel.app/",
     img: cardDetails,
-    logo_1: NextJs,
-    logo_2: ReactJs,
-    logo_3: Tailwind,
-    logo_4: "",
+    logos: [NextJs, ReactJs, Tailwind],
   },
+
   {
     id: 1,
     projectTitle: "Age Calculator",
     projectLink: "https://age-calculator-w-next-js.vercel.app/",
     img: calculator,
-    logo_1: NextJs,
-    logo_2: ReactJs,
-    logo_3: Tailwind,
-    logo_4: Typescript,
+    logos: [NextJs, ReactJs, Tailwind, Typescript],
   },
   {
     id: 2,
     projectTitle: "Landing page, Hoobank",
     projectLink: "https://firstreactlandingpage.000webhostapp.com/",
     img: hoobank,
-    logo_1: ReactJs,
-    logo_2: Vite,
-    logo_3: Tailwind,
-    logo_4: Typescript,
+    logos: [NextJs, ReactJs, Tailwind, Typescript],
   },
   {
     id: 3,
     projectTitle: "Thread Clones",
     projectLink: "https://thread-clone-self.vercel.app/",
     img: thread,
-    logo_1: NextJs,
-    logo_2: ReactJs,
-    logo_3: Tailwind,
-    logo_4: Typescript,
+    logos: [NextJs, ReactJs, Tailwind, Typescript],
   },
 ];
 

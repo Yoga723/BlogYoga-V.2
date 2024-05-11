@@ -8,13 +8,6 @@ const About = () => {
   const changeAbout = (e: any) => {
     e.preventDefault();
     setCurrentAbout(!currentAbout);
-
-    switch (currentAbout) {
-      case true:
-        console.log("current About is True");
-      case false:
-        console.log("current About is false");
-    }
   };
 
   const slideIn = {
@@ -34,7 +27,7 @@ const About = () => {
 
   return (
     <section
-      className="flex flex-row gap-3 flex-auto justify-center items-center w-screen overflow-hidden my-[3.75rem]"
+      className="flex flex-row gap-3 justify-center items-center w-screen overflow-hidden my-[3.75rem] h-48 max-md:overflow-y-scroll"
       id="anchor_about"
     >
       {/* <div className="flex flex-col">
@@ -48,7 +41,7 @@ const About = () => {
         />
       </div> */}
 
-      <div className="w-1 h-24 bg-[#5bb2d7]" />
+      <div className="w-1 h-56 bg-[#5bb2d7]" />
       {/* Beri animasi untuk animatenya */}
       {currentAbout ? (
         <AnimatePresence mode="wait">
@@ -60,8 +53,11 @@ const About = () => {
             animate="visible"
             exit="exit"
           >
-            I am a Frontend developer that have experience with ReactJS,
-            Typescript, javascript.
+            I am a passionate web developer who love create modern, interactive,
+            and responsive web application. <br />I have experience using HTML,
+            CSS, Javascript, ReactJS/NextJS and convert design to live web
+            application while ensuring high quality and perform optimally across
+            platform and devices.
           </motion.p>
         </AnimatePresence>
       ) : (

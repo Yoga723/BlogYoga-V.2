@@ -1,6 +1,4 @@
 "use client";
-import Image from "next/image";
-import Link from "next/link";
 import React, { useState } from "react";
 import ProjectCard from "./Component-child/ProjectCard";
 import { projectList } from "@/utils/index";

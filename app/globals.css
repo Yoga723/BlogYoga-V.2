@@ -49,7 +49,7 @@
 }
 
 .about-content {
-  @apply text-[#dedede] text-lg leading-relaxed font-roboto tracking-wide   w-10/12 h-fit;
+  @apply text-gray-400 text-lg leading-relaxed font-roboto tracking-wide w-10/12 max-md:h-full;
 }
 
 .star {
@@ -107,27 +107,5 @@
   }
   100% {
     --outline-color: #ffffff;
-  }
-}
-
-/* Animasi vertical line about */
-.vertical-animation-true {
-  background: linear-gradient(240deg, #5bb2d7 20%, #f7931e 100%);
-  animation: verticalAnimation 4s linear;
-}
-.vertical-animation-false {
-  background: linear-gradient(240deg, #f7931e 20%, #5bb2d7 100%);
-  animation: verticalAnimation 3s linear;
-}
-
-@keyframes verticalAnimation {
-  /* for blue sky color :#0ea5e9 */
-  0% {
-    background: linear-gradient(240deg, #5bb2d7 20%, #f7931e 100%);
-    animation-timing-function: linear;
-  }
-  100% {
-    background: linear-gradient(-240deg, #f7931e 20%, #5bb2d7 100%);
-    animation-timing-function: linear;
   }
 }

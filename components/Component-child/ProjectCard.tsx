@@ -1,24 +1,10 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
 import Link from "next/link";
-import { useEffect } from "react";
-import { fadeIn } from "@/utils/index";
+import { useRef } from "react";
+import { useInView } from "framer-motion";
 import Image from "next/image";
-
-interface projectCardProp {
-  id: number;
-  projectTitle: string;
-  projectLink: string;
-  index: number;
-  img: any;
-  logo_1: any;
-  logo_2: any;
-  logo_3: any;
-  logo_4: any;
-  active: number;
-  setActive: any;
-}
+import { projectCardProp } from "@/utils";
 
 const ProjectCard = ({
   id,
@@ -26,21 +12,17 @@ const ProjectCard = ({
   projectLink,
   index,
   img,
-  logo_1,
-  logo_2,
-  logo_3,
-  logo_4,
+  logos,
   active,
   setActive,
 }: projectCardProp) => {
   // handleActive = () => {};
 
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   return (
-    <motion.div
+    <div
       // variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 1 }}
       onClick={() => {
         setActive(id);
       }}
@@ -73,36 +55,21 @@ const ProjectCard = ({
             {projectTitle}
           </h2>
           <div className="flex gap-2">
-            <Image
-              src={logo_1}
-              alt="Logo 1"
-              width={25}
-              height={25}
-            />
-            <Image
-              src={logo_2}
-              alt="Logo 2"
-              width={25}
-              height={25}
-            />
-            <Image
-              src={logo_3}
-              alt="Logo 3"
-              width={25}
-              height={25}
-            />
-            {logo_4 && (
-              <Image
-                src={logo_4}
-                alt="Logo 4"
-                width={25}
-                height={25}
-              />
-            )}
+            {logos.map((logo, index) => {
+              return (
+                <Image
+                  key={index}
+                  src={logo}
+                  alt={logo}
+                  width={25}
+                  height={25}
+                />
+              );
+            })}
           </div>
         </div>
       </Link>
-    </motion.div>
+    </div>
   );
 };
 

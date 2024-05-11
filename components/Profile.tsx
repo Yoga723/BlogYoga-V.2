@@ -1,5 +1,5 @@
 "use client";
-import ProfilePic from "@/public/foto data diri2.png";
+import ProfilePic from "@/public/images/foto data diri2.png";
 import Image from "next/image";
 import Link from "next/link";
 import { contactList } from "@/utils";
@@ -17,7 +17,8 @@ const Profile = () => {
         Yoga <span className="text-transparent font-outline-2">pangestu</span>
       </h1>
       <h3 className=" text-center text-[1.56rem] text-[#CCCCCC] md:text-[1.88rem] p-2 pb-4  font-merriweather">
-        Junior Front-end<br/> yogapangestu16@gmail.com
+        Junior Front-end
+        <br /> yogapangestu16@gmail.com
       </h3>
 
       <div className="relative bg-[#3E8586] rounded-full overflow-hidden w-80 h-80 max-md:w-40 max-md:h-40">
@@ -42,7 +43,7 @@ const Profile = () => {
                   className="contact-wrapper"
                   key={Contact.id}
                   animate={{ rotate: 360 }}
-                  transition={{ duration: 1.5 }}
+                  transition={{ duration: (index + 1) * 0.5 }}
                 >
                   <motion.p
                     whileHover={{ scale: 1.3 }}

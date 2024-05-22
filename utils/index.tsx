@@ -44,7 +44,7 @@ export const projectList = [
   {
     id: 2,
     projectTitle: "Landing page, Hoobank",
-    projectLink: "https://firstreactlandingpage.000webhostapp.com/",
+    projectLink: "https://react-hoobank-mu.vercel.app/",
     img: hoobank,
     logos: [NextJs, ReactJs, Tailwind, Typescript],
   },
